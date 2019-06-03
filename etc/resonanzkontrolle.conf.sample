@@ -1,0 +1,6 @@
+[Resonanzkontrolle]
+#hostname = https://example.com/
+#data_dir = data
+#secret_key = dev
+#host = localhost
+#port = 8002

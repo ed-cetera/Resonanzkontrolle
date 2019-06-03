@@ -1,5 +1,19 @@
 #!/bin/sh
 
+while [ "$#" -gt 0 ]; do
+    case "$1" in
+        -c|--config)
+            shift 1
+            if [ "$#" -gt 0 ]; then
+                export RESONANZKONTROLLE_CONF="$1"
+                shift 1
+            fi
+            ;;
+        *)
+            shift 1
+    esac
+done
+
 cd $(dirname $0)
 cd ..
 python3 -m resonanzkontrolle
